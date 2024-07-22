@@ -22,4 +22,4 @@ if submitted:
                      ,  [when_matched().update({'ORDER_FILLED': edited_dataset['ORDER_FILLED']})]
                     )
 cnx = st.connection("snowflake")
-session= = cnx.session
+session= = cnx.session()
