@@ -1,6 +1,5 @@
 # Import python packages
 import streamlit as st
-from snowflake.snowpark.context import get_active_session
 from snowflake.snowpark.functions import col
 
 # Write directly to the app
@@ -22,3 +21,5 @@ if submitted:
                      , (og_dataset['name_on_order'] == edited_dataset['name_on_order'])
                      ,  [when_matched().update({'ORDER_FILLED': edited_dataset['ORDER_FILLED']})]
                     )
+cnx = st.connection("snowflake")
+session= = cnx.session
